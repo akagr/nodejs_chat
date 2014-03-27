@@ -33,7 +33,7 @@ form_room.addEventListener('submit', function(e) {
   e.stopPropagation();
   var room = document.querySelector('input.room');
 
-  if(room)
+  if(room.value)
     socket.emit('server/room/new', room.value);
   room.value = '';
   return false;
@@ -46,7 +46,7 @@ form_chat.addEventListener('submit', function(e) {
   e.stopPropagation();
   var chat = document.querySelector('input.chat');
 
-  if(chat)
+  if(chat.value)
     socket.emit('server/chat', {room: current_room, chat: chat.value});
   chat.value = '';
   return false;
