@@ -6,7 +6,7 @@
 var rooms = [];
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'NodeJs Chat' });
 };
 
 exports.chat = function (socket) {
